@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block data %}
+
+<div class="card shadow col-md-5 mx-auto">
+    <div class="card-header bg-dark text-white">
+        <h4>Login</h4>
+    </div>
+
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="uname" placeholder="Username" class="form-control mb-3" required>
+            <input type="password" name="upassword" placeholder="Password" class="form-control mb-3" required>
+            <button type="submit" class="btn btn-success w-100">Login</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="{% url 'password_reset' %}">Forgot Password?</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

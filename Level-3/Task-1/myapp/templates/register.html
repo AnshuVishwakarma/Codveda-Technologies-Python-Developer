@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{% block data %}
+
+<div class="card shadow col-md-5 mx-auto">
+    <div class="card-header bg-primary text-white">
+        <h4>Create Account</h4>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text" name="uname" placeholder="Username" class="form-control mb-3" required>
+
+            <input type="email" name="uemail" placeholder="Email" class="form-control mb-3" required>
+
+            <input type="password" name="upassword" placeholder="Password" class="form-control mb-3" required>
+
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+    </div>
+
+    <p class="text-center mt-3">
+    Already have an account? 
+    <a href="{% url 'login' %}">Login here</a>
+    </p>
+
+
+</div>
+
+{% endblock %}
