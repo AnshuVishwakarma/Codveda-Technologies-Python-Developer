@@ -1,0 +1,13 @@
+Django Task Manager Project
+Author: Your Name
+
+This is a sample text file created for testing file encryption and decryption.
+
+The purpose of this file is to demonstrate:
+- Secure file encryption
+- File decryption back to original content
+- Usage of Fernet symmetric encryption in Python
+
+Learning never stops.
+Keep building.
+Keep improving.
